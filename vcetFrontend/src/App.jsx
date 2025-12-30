@@ -10,6 +10,7 @@ import Contact from "./components/functionalComponents/Contact";
 import Register from "./components/functionalComponents/Register";
 import Effect from "./components/functionalComponents/Hooks/Effect";
 import Ref from "./components/functionalComponents/Hooks/Ref";
+import EffectWithAPI from "./components/functionalComponents/Hooks/EffectWithAPI";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/login" element = {<Login />}></Route>
           <Route path="/register" element = {<Register />}></Route>
           <Route path="/use-effect" element={<Effect />}></Route>
+          <Route path="/use-effect-api" element={<EffectWithAPI />}></Route>
           <Route path="/use-ref" element={<Ref />}></Route>
         </Routes>
       </BrowserRouter>
