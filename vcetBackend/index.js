@@ -1,8 +1,10 @@
 const express = require("express");
 const mdb = require("mongoose");
+const cors = require('cors')
 const Signup = require("./models/signupSchema");
 const app = express();
 app.use(express.json());
+app.use(cors())
 mdb
   .connect("mongodb://localhost:27017/vcetDB")
   .then(() => {
