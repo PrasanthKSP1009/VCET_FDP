@@ -1,10 +1,11 @@
 import axios from "axios";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate()
   const handleSignup = async(e) =>{
     e.preventDefault();
     const req = await axios.post("http://localhost:3001/signup",{
@@ -13,6 +14,16 @@ const Register = () => {
       password:password
     })
     console.log(req);
+    console.log(req.data);
+    console.log(req.data.isSignup,req.data.message);
+    const isSignup = req.data.isSignup;
+    if(isSignup){
+      alert(req.data.message)
+      navigate('/login')
+    }
+    else{
+      alert("Signup Failed")
+    }
   }
   return (
     <section>
