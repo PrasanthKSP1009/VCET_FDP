@@ -1,4 +1,4 @@
-import ClassComp from "./components/classComponents/classComponent";
+import ClassComp from "./components/classComponents/ClassComponent";
 import FunctionalComponentEg from "./components/functionalComponents/FunctionalComponentEg";
 import Props from "./components/functionalComponents/Props";
 import State from "./components/functionalComponents/Hooks/State";
